@@ -1,0 +1,40 @@
+#logo{
+  position:absolute;
+    top:1px; 
+    left:10px;
+    width: 60px;
+    height:60px;
+    overflow:hidden;
+}
+nav{
+    position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      align-items: center; 
+      color: white;
+      background-color:rgb(96, 11, 146);
+      padding: 0px 10px;
+      display: inline-block;
+      list-style-type: none;
+      box-shadow: 0 0 12px black;
+    }
+  
+    ul{
+      text-decoration: none;
+      mix-blend-mode: overlay;
+        font-size: 16px;
+        color: aliceblue;
+        font-size: large;
+      }
+  
+      .active{
+          color: black;
+      }
+    label{
+        font-size: medium;
+    }
+ 
