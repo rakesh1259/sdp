@@ -21,8 +21,8 @@ export default function a() {
       <input type="date" id="doj" name="doj"></input>
       <label for="destination" id='cls5'>No of passengers:</label>
       <input type="number" placeholder="Number of Passengers" />
+      <button>Search</button>
 		</form>
-
 	</div>
   )
 }
