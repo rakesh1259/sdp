@@ -53,7 +53,7 @@ export default function Login() {
 				<button className="ghost" id="signIn" onClick={handleon}>Sign In</button>
 			</div>
 			<div className="overlay-panel overlay-right">
-				<h1>Hello, Friend!</h1>
+				<h1>Hello, Traveller!</h1>
 				<p>Enter your personal details and start journey with us</p>
 				<button className="ghost" id="signUp" onClick={handleon1}>Sign Up</button>
 			</div>
