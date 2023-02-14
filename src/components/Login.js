@@ -16,7 +16,7 @@ export default function Login() {
     <>
 <div className={kl} id="container">
 	<div className="form-container sign-up-container">
-		<form action="#">
+		<form action="#" id='lform'>
 			<h1>Create Account</h1>
 			<div className="social-container">
 				 <a href='https://www.facebook.com/' className="social"><img src={facebook} alt=" "></img><i className="fa fa-facebook"></i></a>
@@ -26,7 +26,7 @@ export default function Login() {
 			<span>or use your email for registration</span>
 			<input type="text" placeholder="Name" />
 			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="password" placeholder="Password" minLength="8" />
 			<button>Sign Up</button>
 		</form>
 	</div>

@@ -3,7 +3,7 @@ import './Flight.css'
 export default function a() {
   return (
 	<div className="f_container">
-		<form action="#">
+		<form action="#" id='fform'>
 			<h1>Book Your Flight</h1>
       <label for="source" id='cls2'>Source:</label>
 			<input type="text" placeholder="Enter Source" />
@@ -20,7 +20,7 @@ export default function a() {
       <label for="Journey Date" id='cls1'>Date of Return:</label>
       <input type="date" id="doj" name="doj"></input>
       <label for="destination" id='cls5'>No of passengers:</label>
-      <input type="number" placeholder="Number of Passengers" />
+      <input type="number" placeholder="Number of Passengers" min="1" max="5" />
       <button>Search</button>
 		</form>
 	</div>
