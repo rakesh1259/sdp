@@ -39,7 +39,7 @@
 	align-items: center;
     border: 2px solid red;
     border-radius: 12px;
-	background: transparent 2px;
+	background: transparent;
 	
 }
 label{
@@ -66,6 +66,8 @@ label{
 .ho_container ::placeholder{
     color:  black;
 }
-.img_container{
-	align-items: center;
+.img{
+	width: 30%;
+	height: 30%;
+	left: 10%;
 }

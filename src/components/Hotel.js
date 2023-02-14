@@ -1,6 +1,6 @@
 import React from 'react'
 import './Hotel.css'
-import h from './media/hotel.jpg'
+// import h from './media/hotel.jpg'
 export default function Hotel() {
   return (
     <>

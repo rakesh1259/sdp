@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Home from './components/Home';
 import Flight from './components/Flight';
 import Hotel from './components/Hotel';
+// import About from './components/About';
 function App() {
   return (
     <>
