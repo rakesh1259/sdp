@@ -29,10 +29,7 @@ html {
 
 
 .con{
-  background-color:#875bf7;
-  
-  
-  ;
+  background-color:#139ef4;
   position: absolute;
 /* width: 100%;
 height: 100%; */
@@ -93,7 +90,7 @@ width: 380px;
 height: 420px; 
 background: linear-gradient(0deg, transparent,rgba(234, 12, 19, 0.725),rgba(234, 12, 12, 0.725));
 transform-origin: bottom right; 
-animation: animate 2s linear infinite;
+animation: animate 4s linear infinite;
 }
 .container::after{
 content: ' ';
@@ -105,7 +102,7 @@ height: 420px;
 background: linear-gradient(0deg, transparent,rgb(251, 48, 48),rgb(251, 51, 51));
 transform-origin: bottom right; 
 animation: animate 2s linear infinite;
-animation-delay: -3s;
+animation-delay: -2s;
 }
 @keyframes animate
 {

@@ -65,3 +65,7 @@ label{
 .f_container ::placeholder{
     color:  black;
 }
+button:hover {
+	background-color: #1026f0;
+  }
+  

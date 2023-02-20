@@ -12,6 +12,7 @@ export default function Navbar() {
                 <NavLink to="/home" ><label>Home</label></NavLink>&emsp;&emsp;
                 <NavLink to="/flight" ><label>FLIGHTS</label></NavLink>&emsp;&emsp;
                 <NavLink to="/hotel" ><label>HOTELS</label></NavLink>&emsp;&emsp;
+                <NavLink to="/"><label>Booking History</label></NavLink>&emsp;&emsp;  
                 <NavLink to="/about"><label>About us</label></NavLink>&emsp;&emsp;  
                 <NavLink to="/login"><label>Login</label></NavLink>&emsp;&emsp;    
             </ul>

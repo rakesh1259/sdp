@@ -27,7 +27,7 @@ nav{
       text-decoration: none;
       mix-blend-mode: overlay;
         font-size: 16px;
-        color: aliceblue;
+        color: rgb(243, 240, 255);
         font-size: large;
       }
   
@@ -35,6 +35,6 @@ nav{
           color: rgb(0, 0, 0);
       }
     label{
-        font-size: medium;
+        font-size: large;
     }
  

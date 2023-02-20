@@ -16,7 +16,7 @@ export default function About() {
         <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>jane@example.com</p>    
-        <a href="https://www.linkedin.com/in/vinay-pati-257679226/"><p><button class="button">Contact</button></p></a>
+        <a href="https://t.me/vinaychinnu"><p><button class="button">Contact</button></p></a>
         </div>
       </div>
       </div>
@@ -33,7 +33,7 @@ export default function About() {
         <p class="title">Developer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>jane@example.com</p>    
-        <a href="https://www.linkedin.com/in/rakesh-bandaru-aa3abb225/"><p><button class="button">Contact</button></p></a>
+        <a href="https://t.me/rakhi1259"><p><button class="button">Contact</button></p></a>
         </div>
       </div>
       </div>
@@ -50,7 +50,7 @@ export default function About() {
         <p class="title">CEO & Founder</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>jane@example.com</p>    
-        <a href="https://www.linkedin.com/in/aman-darbar-784912226/"><p><button class="button">Contact</button></p></a>
+        <a href="https://t.me/Aman1236547"><p><button class="button">Contact</button></p></a>
         </div>
       </div>
       </div>
