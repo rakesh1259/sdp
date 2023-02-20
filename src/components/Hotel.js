@@ -1,12 +1,12 @@
 import React from 'react'
 import './Hotel.css'
-// import h from './media/hotel.jpg'
+ import h from './media/hotel.jpg'
 export default function Hotel() {
   return (
     <>
-    {/* <div className='img_container'>
-    <img src={h} alt="himg "></img>
-    </div> */}
+    <div class="parent">
+    <img src={h} alt="" ></img>
+  </div>
     <div className="ho_container">
 		<form action="#" id='hform'>
 			<h1>Book Your Hotel</h1>

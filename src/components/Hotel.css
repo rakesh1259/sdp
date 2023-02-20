@@ -28,7 +28,7 @@
 
 .ho_container {
     top: 10%;
-    left: -10%;
+    left: 26.5%;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	overflow: hidden;
     width: 200%;
@@ -66,8 +66,23 @@ label{
 .ho_container ::placeholder{
     color:  black;
 }
-.img{
-	width: 30%;
-	height: 30%;
-	left: 10%;
-}
+.parent {
+	position: absolute;
+	margin-top: auto;
+	margin-bottom: auto;
+	top: 24%;
+	left: 9%;
+	width: 70vh;
+	height: 65vh;
+	overflow: hidden;
+	display: flex;
+	border: 2px solid red;
+    border-radius: 12px;
+  }
+  
+  img {
+	max-width: inherit;
+	max-height: inherit;
+	height: inherit;
+	width: inherit;
+  }
