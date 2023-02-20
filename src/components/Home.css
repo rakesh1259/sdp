@@ -3,17 +3,16 @@
     box-shadow:  32px 32px 66px #13256b,
              -32px -32px 66px #2b55f9;
     width: 50%;
-    height: 80%;
-    top: 20%;
+    height: 70%;
     margin-left: auto;
     margin-right: auto;
     border-color: rgb(169, 132, 228);
 }
-h1{
+ h1{
     text-decoration-color: black;
    text-align: center;
 }
-p{
+ p{
     text-decoration-color: rgb(14, 38, 193);
     text-align: center;
 }

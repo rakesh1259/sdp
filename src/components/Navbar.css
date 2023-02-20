@@ -32,7 +32,7 @@ nav{
       }
   
       .active{
-          color: black;
+          color: rgb(0, 0, 0);
       }
     label{
         font-size: medium;
