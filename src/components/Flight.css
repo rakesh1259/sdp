@@ -26,7 +26,7 @@
 }
 
 .f_container {
-  top: 15%;
+  top: 12%;
   left: -50%;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   overflow: hidden;
@@ -75,15 +75,16 @@ button:hover {
   background-repeat: no-repeat;
   width: 200px;
   height: 70px;
-  -webkit-animation: movingplane 10s linear infinite;
-  -moz-animation: movingplane 10s linear infinite;
-  -o-animation: movingplane 10s linear infinite;
+  -webkit-animation: movingplane 5s linear infinite;
+  -moz-animation: movingplane 5s linear infinite;
+  -o-animation: movingplane 5s linear infinite;
 }
 @keyframes movingplane {
-   0% {
+  0% {
     margin-left: 100%;
-    top: 10%;
-  } 
+    margin-right: 100%;
+    top: 8%;
+  }
   0% {
     margin-left: 50%;
   }
