@@ -78,6 +78,7 @@ button:hover {
   -webkit-animation: movingplane 5s linear infinite;
   -moz-animation: movingplane 5s linear infinite;
   -o-animation: movingplane 5s linear infinite;
+  animation-direction:normal;
 }
 @keyframes movingplane {
   0% {
