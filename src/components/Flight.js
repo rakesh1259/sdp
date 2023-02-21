@@ -2,6 +2,10 @@ import React from 'react'
 import './Flight.css'
 export default function a() {
   return (
+    <>
+    <div className="s_container">
+   <div id="aeroplane"></div>
+    </div>
 	<div className="f_container">
 		<form action="#" id='fform'>
 			<h1>Book Your Flight</h1>
@@ -24,5 +28,6 @@ export default function a() {
       <button>Search</button>
 		</form>
 	</div>
+  </>
   )
 }
