@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Flight from './components/Flight'
 import Hotel from './components/Hotel'
 import About from './components/About'
+import Nomatch from './components/Nomatch';
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
       <Route path='/flight' element={<Flight/>}/>
       <Route path='/about'  element={<About/>}/>
       <Route path='/hotel'  element={<Hotel/>}/>
+      <Route path='*' element={<Nomatch />} />
     </Routes>
    </> 
   );
