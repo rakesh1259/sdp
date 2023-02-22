@@ -112,6 +112,7 @@ export default function Home() {
       <span class="stars"></span>
       <h2 class="goi2">Paris</h2>
       <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+<<<<<<< HEAD
     </div>
   </div>
   <div class="face face2">
@@ -123,6 +124,8 @@ export default function Home() {
       <span class="stars"></span>
       <h2 class="goi2">Italy</h2>
       <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+=======
+>>>>>>> b2814cdd1bffb6dae0e2c9cf7624108c32bcd45e
     </div>
   </div>
   <div class="face face2">

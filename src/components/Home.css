@@ -138,6 +138,7 @@
     .h_card:nth-child(10) .face.face2 {
       background-image: url('./media/eifeltower.jpg');
       border-radius: 15px;
+<<<<<<< HEAD
     }
     .h_card:nth-child(11) .face.face2 {
       background-image: url('./media/Colosseum.jpg');
@@ -145,3 +146,6 @@
     }
  
  
+=======
+    }
+>>>>>>> b2814cdd1bffb6dae0e2c9cf7624108c32bcd45e
