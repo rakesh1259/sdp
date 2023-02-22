@@ -6,7 +6,7 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 
-const uri = "mongodb+srv://vinay:vinay@cluster0.xnvxz69.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin:admin@cluster0.rmsi2co.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 const db = client.db("SDP");
 const col = db.collection("coll");

@@ -139,5 +139,9 @@
       background-image: url('./media/eifeltower.jpg');
       border-radius: 15px;
     }
+    .h_card:nth-child(11) .face.face2 {
+      background-image: url('./media/Colosseum.jpg');
+      border-radius: 15px;
+    }
  
  

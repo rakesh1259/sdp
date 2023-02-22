@@ -117,6 +117,17 @@ export default function Home() {
   <div class="face face2">
   </div>
 </div>
+<div class="h_card">
+  <div class="face face1">
+    <div class="content">
+      <span class="stars"></span>
+      <h2 class="goi2">Italy</h2>
+      <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+    </div>
+  </div>
+  <div class="face face2">
+  </div>
+</div>
 </div>
 
 
