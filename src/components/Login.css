@@ -8,7 +8,8 @@ body {
   background: url("./media/beach.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-
+  position: relative;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;

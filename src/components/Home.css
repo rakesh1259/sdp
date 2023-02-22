@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
   .h_container {
+    top: 50%;
     max-width: 100vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -9,6 +10,7 @@
   }
     .h_card {
       position: relative;
+      top: 90%;
       width: 300px;
       height: 400px;
       margin: 0 auto;
@@ -16,6 +18,13 @@
       border-radius: 15px;
       box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
       
+    }
+    #nav .h_conatiner{
+      float: left;
+      display: block;
+      transition: top 0.3s;
+      justify-content: space-around;
+      display: flex;
     }
       .face {
         position: absolute;
@@ -36,23 +45,35 @@
             padding: 0;
           }
 
-          .java {
+          .vm {
             background-color: #fffc00;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
 
-          .python {
+          .tj {
             background-color: #00fffc;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
 
-          .cSharp {
+          .golconda {
             background-color: #fc00ff;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+          .goi {
+            background-color: #fc00ff;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .goi2 {
+            top: 70%;
+            background-color: #fc00ff;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
         
 
         .face2 {
@@ -77,27 +98,46 @@
     }
 
     .h_card:nth-child(1) .face.face2 {
-      background-image: url('./media/mexico.jpg');
+      background-image: url('./media/victoria\ memorial.jpeg');
       border-radius: 15px;
     }
 
     .h_card:nth-child(2) .face.face2 {
-      background-image: linear-gradient(
-        40deg,
-        #fc00ff 0%,
-        #00fffc 45%,
-        #fffc00 100%
-      );
+      background-image: url('./media/tajmahal.jpeg');
       border-radius: 15px;
     }
 
     .h_card:nth-child(3) .face.face2 {
-      background-image: linear-gradient(
-        40deg,
-        #00fffc 0%,
-        #fc00ff 45%,
-        #fffc00 100%
-      );
+      background-image: url('./media/Golconda.jpg');
       border-radius: 15px;
     }
+    .h_card:nth-child(4) .face.face2 {
+      background-image: url('./media/goi.jpg');
+      border-radius: 15px;
+    }
+    .h_card:nth-child(5) .face.face2 {
+      background-image: url('./media/goa.jpg');
+      border-radius: 15px;
+    }
+    .h_card:nth-child(6) .face.face2 {
+      background-image: url('./media/kerala.jpg');
+      border-radius: 15px;
+    }
+    .h_card:nth-child(7) .face.face2 {
+      background-image: url('./media/ladakh.jpg');
+      border-radius: 15px;
+    }
+    .h_card:nth-child(8) .face.face2 {
+      background-image: url('./media/AMRITSAR.jpg');
+      border-radius: 15px;
+    }
+    .h_card:nth-child(9) .face.face2 {
+      background-image: url('./media/abudhabi.jpg');
+      border-radius: 15px;
+    }
+    .h_card:nth-child(10) .face.face2 {
+      background-image: url('./media/eifeltower.jpg');
+      border-radius: 15px;
+    }
+ 
  

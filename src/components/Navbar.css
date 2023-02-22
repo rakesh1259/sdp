@@ -21,6 +21,7 @@ nav{
       display: inline-block;
       list-style-type: none;
       box-shadow: 0 0 12px black;
+      z-index: 2;
     }
   
     ul{
@@ -37,4 +38,3 @@ nav{
     label{
         font-size: large;
     }
- 
