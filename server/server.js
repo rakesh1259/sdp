@@ -8,8 +8,8 @@ app.use(express.json())
 
 const uri = "mongodb+srv://admin:admin@cluster0.rmsi2co.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
-const db = client.db("SDP");
-const col = db.collection("coll");
+const db = client.db("EXPLORE");
+const col = db.collection("REGISTER");
 
 app.post('/',(req,res) => {
     console.log(req.body);

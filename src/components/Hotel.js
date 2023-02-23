@@ -2,6 +2,13 @@ import React from "react";
 import "./Hotel.css";
 import h from "./media/hotel.jpg";
 export default function Hotel() {
+  const disablePastDate = () => {
+    const today = new Date();
+    const dd = String(today.getDate() + 1).padStart(2, "0");
+    const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    const yyyy = today.getFullYear();
+    return yyyy + "-" + mm + "-" + dd;
+  };
   return (
     <>
       <div class="parent">
@@ -19,11 +26,11 @@ export default function Hotel() {
             <option value="nroom">Normal Room</option>
           </select>
           <label for="Journey Date">Check in:</label>
-          <input type="date" id="doj" name="doj" required></input>
+          <input type="date" id="doj" name="doj" required min={disablePastDate()}></input>
           <label for="Journey Date" id="cls1">
             Check Out:
           </label>
-          <input type="date" id="doj" name="doj" required></input>
+          <input type="date" id="doj" name="doj" required min={disablePastDate()}></input>
           <label for="guests" id="cls5">
             No of Guests:
           </label>
