@@ -1,4 +1,5 @@
-import React from "react";
+import * as React from 'react';
+// import Alert from '@mui/material/Alert';
 import { useState } from "react";
 import "./Login.css";
 import axios from 'axios';
@@ -48,12 +49,11 @@ export default function Login() {
                 <i className="fas fa-linkedin-in"></i>
               </a>
             </div>
-
             <span>or use your email for registration</span>
             <input type="text" placeholder="Name" name="name" required />
             <input type="email" placeholder="Email" name="email" required/>
             <input type="password" placeholder="Password" minLength="8" name="pass" required />
-            <button value='STORE' >Sign Up</button>
+            <button value='STORE'  class="close" data-dismiss="alert" variant="outlined">Sign Up</button>
             {res}
           </form>
         </div>
