@@ -32,7 +32,7 @@ export default function Login() {
     <>
       <div className={kl} id="container">
         <div className="form-container sign-up-container">
-          <form action="#" id="lform" onSubmit={handleSubmit}>
+          <form action="#" id="lform" onSubmit={handleSubmit} autoComplete="false">
             <h1>Create Account</h1>
             <div className="social-container">
               <a href="https://www.facebook.com/" className="social">
@@ -50,15 +50,15 @@ export default function Login() {
             </div>
 
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" name="name" />
-            <input type="email" placeholder="Email" name="email" />
-            <input type="password" placeholder="Password" minLength="8" name="pass" />
+            <input type="text" placeholder="Name" name="name" required />
+            <input type="email" placeholder="Email" name="email" required/>
+            <input type="password" placeholder="Password" minLength="8" name="pass" required />
             <button value='STORE' >Sign Up</button>
             {res}
           </form>
         </div>
         <div className="form-container sign-in-container">
-          <form action="#">
+          <form action="#" >
             <h1>Sign in</h1>
             <div className="social-container">
               <a href="https://www.facebook.com/" className="social">
@@ -75,8 +75,8 @@ export default function Login() {
               </a>
             </div>
             <span>or use your account</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="email" placeholder="Email" required/>
+            <input type="password" placeholder="Password" required/>
             <p href="/">Forgot your password?</p>
             <button  >Sign In</button>
           </form>

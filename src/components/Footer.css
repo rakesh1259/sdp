@@ -1,0 +1,5 @@
+.text-center p-3{
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+}
