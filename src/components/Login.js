@@ -1,5 +1,6 @@
 import * as React from 'react';
 // import Alert from '@mui/material/Alert';
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Login.css";
 import axios from 'axios';
@@ -14,26 +15,29 @@ export default function Login() {
   const handleon1 = () => {
     setKl("container right-panel-active");
   };
-  const [res,setRes] = useState(null);
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    axios.post('http://localhost:1259/',{
-      name : data.get('name'),
-      email : data.get('email'),
-      password : data.get('pass')
+  var [name,setName]= useState(null);
+  var [email,setEmail]=useState(null);
+  var [pass,setPassword]=useState(null);
+  const navigate=useNavigate(false)
+  function signupdata(){
+    const registerdata={
+      name:name,
+      email:email,
+      password:pass
+    }
+    console.log(registerdata);
+    axios.post("http://localhost:1259/api/register",registerdata)
+    .then(response=> {
+      navigate('/login')
     })
-    .then((response)=>{
-      console.log(response.data);
-      setRes(response.data);
-    })
-    .catch((err)=>{console.log(err)})
+    .catch(e=>console.log(e))
+
   }
   return (
     <>
       <div className={kl} id="container">
         <div className="form-container sign-up-container">
-          <form action="#" id="lform" onSubmit={handleSubmit} autoComplete="false">
+          <form action="#" id="lform"  autoComplete="false">
             <h1>Create Account</h1>
             <div className="social-container">
               <a href="https://www.facebook.com/" className="social">
@@ -50,11 +54,10 @@ export default function Login() {
               </a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" name="name" required />
-            <input type="email" placeholder="Email" name="email" required/>
-            <input type="password" placeholder="Password" minLength="8" name="pass" required />
-            <button value='STORE'  class="close" data-dismiss="alert" variant="outlined">Sign Up</button>
-            {res}
+            <input type="text" placeholder="Name" name="name" required onChange={(e)=>{setName(e.target.value)}}/>
+            <input type="email" placeholder="Email" name="email" required onChange={(e)=>{setEmail(e.target.value)}}/>
+            <input type="password" placeholder="Password" minLength="8" name="pass" required onChange={(e)=>{setPassword(e.target.value)}} />
+            <button value='STORE'  class="close" data-dismiss="alert" variant="outlined" onClick={signupdata}>Sign Up</button>     
           </form>
         </div>
         <div className="form-container sign-in-container">
