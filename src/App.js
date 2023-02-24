@@ -7,6 +7,7 @@ import Flight from './components/Flight'
 import Hotel from './components/Hotel'
 import About from './components/About'
 import Nomatch from './components/Nomatch';
+// import Footer from './components/Footer';
 function App() {
   return (
     <>
@@ -19,7 +20,8 @@ function App() {
       <Route path='/hotel'  element={<Hotel/>}/>
       <Route path='*' element={<Nomatch />} />
     </Routes>
-   </> 
+    {/* <Footer/> */}
+    </>
   );
 }
 export default App;

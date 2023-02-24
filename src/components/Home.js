@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 import './Navbar.css'
-// import m from "./media/mexico.jpg";
 export default function Home() {
   return (
     <div class="h_container">
