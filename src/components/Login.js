@@ -1,6 +1,6 @@
 import * as React from 'react';
 // import Alert from '@mui/material/Alert';
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Login.css";
 import axios from 'axios';
@@ -8,6 +8,7 @@ import facebook from "./media/f.png";
 import google from "./media/google.png";
 import linkedin from "./media/l.png";
 export default function Login() {
+  // const navigate = useNavigate();
   const [kl, setKl] = useState("container");
   const handleon = () => {
     setKl("container");
@@ -32,6 +33,10 @@ export default function Login() {
     })
     .catch(e=>console.log(e))
 
+  }
+
+  const handlesign = () =>{
+    navigate('/');
   }
   return (
     <>
@@ -78,10 +83,11 @@ export default function Login() {
               </a>
             </div>
             <span>or use your account</span>
-            <input type="email" placeholder="Email" required/>
-            <input type="password" placeholder="Password" required/>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
             <p href="/">Forgot your password?</p>
-            <button  >Sign In</button>
+           {/* <Link to='/'> <p className='badge bg-primary text-wrap>Sign In</p></Link> */}
+           <button onClick={handlesign}>Sign In</button>
           </form>
         </div>
         <div className="overlay-container">
