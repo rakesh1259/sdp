@@ -68,36 +68,21 @@ label {
 button:hover {
   background-color: #1026f0;
 }
-marquee {
+#aeroplane {
   position: absolute;
-  /* background-image: url("https://www.dl.dropboxusercontent.com/s/5beukq1zg37jlr7/airbus.png"); */
-  /* background-repeat: no-repeat; */
-  /* width: 100%; */
-   height: 70px;
-   /*
-  -webkit-animation: movingplane 15s linear infinite;
+  background-image: url("https://www.dl.dropboxusercontent.com/s/5beukq1zg37jlr7/airbus.png");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 70px;
+  -webkit-animation: movingplane 5s linear infinite;
   -moz-animation: movingplane 5s linear infinite;
-  -o-animation: movingplane 5s linear infinite; */
+  -o-animation: movingplane 5s linear infinite;
 }
-/* @keyframes movingplane {
+@keyframes movingplane {
   0% {
     top: 8%;
   }
   0% {
     margin-left: 50%;
-  }
-} */
-
-
-
-.blink {
-  animation: linear infinite;
-  width: 100%;
-  color: red;
-  font-family: sans-serif;
-}
-@keyframes blinker {
-  50% {
-      opacity: 0;
   }
 }

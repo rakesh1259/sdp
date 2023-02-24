@@ -54,10 +54,10 @@ toast('Flight Booked Sucessfully', {
  }
   return (
     <>
-      <div className="s_container" >
-       <marquee direction="left" scrollamount="12" className="blink">
-        <div ><img src="https://www.dl.dropboxusercontent.com/s/5beukq1zg37jlr7/airbus.png" alt=""></img></div>
-        </marquee>
+      <div className="s_container">
+       
+        <div id="aeroplane"></div>
+
       </div>
       <div className="f_container">
         <form onSubmit={flightdata} id="fform">
