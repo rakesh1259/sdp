@@ -16,6 +16,7 @@ export default function Navbar() {
                 <NavLink to="/booking"><label>Booking History</label></NavLink>&emsp;&emsp;  
                 <NavLink to="/about"><label>About us</label></NavLink>&emsp;&emsp;  
                 <NavLink to="/login"><label>Login</label></NavLink>&emsp;&emsp;  
+                {/* <Avatar src="/broken-image.jpg" alt=''/> */}
             </ul>
         </nav>
     </>

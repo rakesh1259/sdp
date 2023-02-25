@@ -8,7 +8,7 @@ import Hotel from './components/Hotel'
 import About from './components/About'
 import Nomatch from './components/Nomatch';
 import Bookings from './components/Bookings'
-// import Footer from './components/Footer';
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 function App() {
@@ -25,7 +25,6 @@ function App() {
       <Route path='/booking'  element={<Bookings/>}/>
       <Route path='*' element={<Nomatch />} />
     </Routes>
-    {/* <Footer/> */}
     </>
   );
 }
