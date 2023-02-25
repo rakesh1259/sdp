@@ -14,12 +14,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
+// import IconButton from '@mui/material/IconButton';
+// import Tooltip from '@mui/material/Tooltip';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-import DeleteIcon from '@mui/icons-material/Delete';
-import FilterListIcon from '@mui/icons-material/FilterList';
+// import DeleteIcon from '@mui/icons-material/Delete';
+// import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 
 function createData(Source, Destination, JourneyDate, passengers, TravelClass) {
@@ -34,7 +34,7 @@ function createData(Source, Destination, JourneyDate, passengers, TravelClass) {
 
 const rows = [
   createData('vizag', 'Hyderabad','30th March', 2,'Business Class'),
-  createData('jammukashmir', 'chennai','30th Jan', 5,'First Class'),
+  createData('Srinagar', 'chennai','30th Jan', 5,'First Class'),
   createData('mumbai', 'kolkata','17th Dec', 1,'Economy Class'),
   createData('delhi', 'lucknow','31th Sept', 3,'First Class'),
   createData('punjab', 'dubai','05th July', 4,'Economy Class'),
@@ -204,7 +204,7 @@ function EnhancedTableToolbar(props) {
         </Typography>
       )}
 
-      {numSelected > 0 ? (
+      {/* {numSelected > 0 ? (
         <Tooltip title="Delete">
           <IconButton>
             <DeleteIcon />
@@ -216,7 +216,7 @@ function EnhancedTableToolbar(props) {
             <FilterListIcon />
           </IconButton>
         </Tooltip>
-      )}
+      )} */}
     </Toolbar>
   );
 }
