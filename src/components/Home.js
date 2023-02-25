@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div>
-      <div class="slider">
+            <div class="slider">
         <div class="slides">
           <input type="radio" name="radio-btn" id="radio1" />
           <input type="radio" name="radio-btn" id="radio2" />
@@ -48,7 +48,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="vm">Kolkata</h2>
-              <p class="vm">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+              <p class="vm">The Victoria Memorial is a large marble building on the Maidan in Central Kolkata, built between 1906 and 1921.</p>
             </div>
           </div>
           <div class="face face2">
@@ -60,7 +60,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="tj">New Delhi</h2>
-              <p class="tj">Python is an interpreted, high-level and general-purpose programming language.</p>
+              <p class="tj">The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. </p>
             </div>
           </div>
           <div class="face face2">
@@ -71,7 +71,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="golconda">Hyderabad</h2>
-              <p class="golconda">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+              <p class="golconda">Golconda (Telugu: గోల్కొండ, romanized: Gōlkōnḍa) is a historic fortress and ruined city located in the western outskirts of Hyderabad, Telangana, India. It was originally called Mankal.</p>
             </div>
           </div>
           <div class="face face2">
@@ -82,7 +82,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="goi">Mumbai</h2>
-              <p class="goi">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+              <p class="goi">The Gateway of India is an arch-monument built in the early 20th century in the city of Mumbai (Bombay), India.</p>
             </div>
           </div>
           <div class="face face2">
@@ -93,7 +93,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="goi2">Goa</h2>
-              <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+              <p class="goi2">Goa is visited by large numbers of international and domestic tourists each year because of its white-sand beaches, active nightlife, places of worship, and World Heritage-listed architecture.</p>
             </div>
           </div>
           <div class="face face2">
@@ -104,7 +104,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="goi2">Kerala</h2>
-              <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+              <p class="goi2">Kerala's culture and traditions, coupled with its varied demographics, have made the state one of the most popular tourist destinations in India. Kerala's beaches, backwaters, lakes, mountain ranges, waterfalls, ancient ports, palaces, religious institutions and wildlife sanctuaries are major attractions for both domestic and international tourists.</p>
             </div>
           </div>
           <div class="face face2">
@@ -115,7 +115,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="goi2">Ladakh</h2>
-              <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+              <p class="goi2">Tourism is one of an economic contributor to the union territory of Ladakh in Northern India. The union territory is sandwiched between the Karakoram mountain...</p>
             </div>
           </div>
           <div class="face face2">
@@ -126,7 +126,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="goi2">Punjab</h2>
-              <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+              <p class="goi2">The Golden Temple (also known as the Harmandir Sahib, lit. 'abode of God', Punjabi pronunciation)is a gurdwara located in the city of Amritsar, Punjab, India. It is the preeminent spiritual site of Sikhism. It is one of the holiest sites in Sikhism, alongside the Gurdwara Darbar Sahib Kartarpur in Kartarpur, and Gurdwara Janam Asthan in Nankana Sahib.</p>
             </div>
           </div>
           <div class="face face2">
@@ -137,7 +137,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="goi2">Abu Dhabi</h2>
-              <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+              <p class="goi2">Abu Dhabi is the capital and second-most populous city (after Dubai) of the United Arab Emirates. It is also the capital of the Emirate of Abu Dhabi and the centre of the Abu Dhabi Metropolitan Area.</p>
             </div>
           </div>
           <div class="face face2">
@@ -148,7 +148,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="goi2">Paris</h2>
-              <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+              <p class="goi2">The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.</p>
             </div>
           </div>
           <div class="face face2">
@@ -159,7 +159,7 @@ export default function Home() {
             <div class="content">
               <span class="stars"></span>
               <h2 class="goi2">Italy</h2>
-              <p class="goi2">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+              <p class="goi2">The Colosseum is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world, despite its age. </p>
             </div>
           </div>
           <div class="face face2">
