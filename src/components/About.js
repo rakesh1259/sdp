@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import rakhi from "./media/rakesh.jpg";
 import chinnu from "./media/vinay.jpg";
-import am from "./media/aman.JPG";
+import aman from "./media/aman.JPG";
 export default function About() {
   return (
     <div class="row">
@@ -52,7 +52,7 @@ export default function About() {
         <div class="card">
           <div class="container">
             <div className="con">
-              <img src={am} alt="img" id="i1" />
+              <img src={aman} alt="img" id="i1" />
               <div className="rtext">
                 <h2>Aman</h2>
                 <p class="title">CEO & Founder</p>
