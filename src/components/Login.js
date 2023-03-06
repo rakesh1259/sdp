@@ -34,7 +34,6 @@ export default function Login() {
     .catch(e=>console.log(e))
 
   }
-
   const handlesign = () =>{
     navigate('/');
   }
