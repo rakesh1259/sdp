@@ -10,6 +10,18 @@ import facebook from "./media/f.png";
 import google from "./media/google.png";
 import linkedin from "./media/l.png";
 export default function Login() {
+  const handletoastr=()=>{
+    toast.success('Registration Sucessfull', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+     }
   const handletoastl1=()=>{
     toast.success('Login Sucessfull', {
       position: "bottom-right",
@@ -67,7 +79,6 @@ export default function Login() {
     console.log(registerdata);
     axios.post("http://localhost:1259/api/register",registerdata)
     .then(response=> {
-      navigate('/')
     })
     .catch(e=>console.log(e))
 
