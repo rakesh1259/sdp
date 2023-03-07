@@ -5,6 +5,7 @@ const signuptemp=require("./models/Registermodel")
 const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
 const FlightModel = require('./models/FlightModel');
+const HotelModel =require('./models/HotelModel');
 router.post('/register',async (req,res)=>{
     const saltpwd = await bcrypt.genSalt(10);
     const securepassword = await bcrypt.hash(req.body.password,saltpwd);
@@ -36,6 +37,21 @@ router.post('/flight',async(req,res)=>{
     catch(err){
       console.log(err);
     }
+})
+router.post('/hotel',async(req,res)=>{
+  const location=req.body.location;
+const TypeofRoom=req.body.TypeofRoom;
+const Checkin = req.body.Checkin;
+const CheckOut= req.body.CheckOut;
+const Guests=req.body.guests;
+const hotels = new HotelModel({location:location, TypeofRoom:TypeofRoom,Checkin:Checkin,CheckOut:CheckOut,Guests:Guests});
+try{
+  await hotels.save();
+  res.send("Inserted Values");
+}
+  catch(err){
+    console.log(err);
+  }
 })
 router.post('/login',async (req,res)=>{
   const usercheck = await signuptemp.findOne({ email: req.body.email });
