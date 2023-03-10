@@ -86,3 +86,9 @@ button:hover {
     margin-left: 50%;
   }
 }
+.form-data{
+  top: 0;
+  position: absolute;
+  left: 0%;
+  text-align: left;
+}
