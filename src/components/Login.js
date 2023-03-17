@@ -81,14 +81,15 @@ export default function Login() {
         })
     
   }
-  var [mail,setLEmail]=useState();
-  var [pwd,setLPassword]=useState();
+  // var [mail,setLEmail]=useState();
+  // var [pwd,setLPassword]=useState();
   const [cookies, setCookie, removeCookie] = useCookies(['dummycookie']);
   function signindata(e){
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
     const logindata={
-      email:mail,
-      password:pwd
+      email:data.get('mail'),
+      password:data.get('pwd')
     }
     axios.post("http://localhost:1259/api/login",logindata)
     .then((response)=> {
@@ -138,7 +139,7 @@ export default function Login() {
           </form>
         </div>
         <div className="form-container sign-in-container">
-          <form action="#" >
+          <form onSubmit={signindata} >
             <h1>Sign in</h1>
             <div className="social-container">
               <a href="https://www.facebook.com/" className="social">
@@ -155,10 +156,10 @@ export default function Login() {
               </a>
             </div>
             <span>or use your account</span>
-            <input type="email" placeholder="Email" value={mail} name='mail' onChange={(e)=>{setLEmail(e.target.value)}}/>
-            <input type="password" placeholder="Password" value={pwd} name='pwd' onChange={(e)=>{setLPassword(e.target.value)}}/>
+            <input type="email" placeholder="Email"  name='mail' />
+            <input type="password" placeholder="Password"  name='pwd' />
             <p href="/">Forgot your password?</p>
-           <button onClick={signindata}>Sign In</button>
+           <button >Sign In</button>
           </form>
         </div>
         <div className="overlay-container">
