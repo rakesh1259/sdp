@@ -77,7 +77,7 @@ export default function Login() {
         console.log(registerdata);
         axios.post("http://localhost:1259/api/register",registerdata)
         .then(response=> {
-          console.log("Success")
+          
         })
     
   }
@@ -103,6 +103,7 @@ export default function Login() {
       }
       else if(response.status===200){
         setCookie('token', response.data.token, { path: '/' });
+        console.log("Success")
         navigate('/')  
         handletoastl1();
       }else{
