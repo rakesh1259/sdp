@@ -94,7 +94,7 @@ export default function Login() {
     axios.post("http://localhost:1259/api/login",logindata)
     .then((response)=> {
       if(response.data==="invalid"){
-        console.log(response.email)
+        
         handletoastp();
       }
       else if(response.data==="newuser")
@@ -104,6 +104,7 @@ export default function Login() {
       else if(response.status===200){
         setCookie('token', response.data.token, { path: '/' });
         console.log("Success")
+        console.log(response.data.email)
         navigate('/')  
         handletoastl1();
       }else{

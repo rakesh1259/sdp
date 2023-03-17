@@ -7,14 +7,14 @@ import nat from './media/national.png'
 import res from './media/resort.png'
 export default function Home() {
 
-  // var counter = 1;
-  // setInterval(function () {
-  //   document.getElementById('radio' + counter).checked = true;
-  //   counter++;
-  //   if (counter > 4) {
-  //     counter = 1;
-  //   }
-  // }, 5000);
+  var counter = 1;
+  setInterval(function () {
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if (counter > 4) {
+      counter = 1;
+    }
+  }, 5000);
 
   return (
     <div>
