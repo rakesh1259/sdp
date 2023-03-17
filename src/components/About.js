@@ -5,20 +5,20 @@ import chinnu from "./media/vinay.jpg";
 import aman from "./media/aman.JPG";
 export default function About() {
   return (
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <div class="container">
+    <div className="row">
+      <div className="column">
+        <div className="card">
+          <div className="container">
             <div className="con">
               <img src={chinnu} alt="img" id="i1" />
               <div className="rtext">
                 <h2>Vinay</h2>
-                <p class="title">Designer</p>
+                <p className="title">Designer</p>
                 <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                 <p>jane@example.com</p>
                 <a href="https://t.me/vinaychinnu">
                   <p>
-                    <button class="button">Contact</button>
+                    <button className="button">Contact</button>
                   </p>
                 </a>
               </div>
@@ -27,19 +27,19 @@ export default function About() {
         </div>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <div class="container">
+      <div className="column">
+        <div className="card">
+          <div className="container">
             <div className="con">
               <img src={rakhi} alt="img" id="i1" />
               <div className="rtext">
                 <h2>Rakesh</h2>
-                <p class="title">Developer</p>
+                <p className="title">Developer</p>
                 <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                 <p>jane@example.com</p>
                 <a href="https://t.me/rakhi1259">
                   <p>
-                    <button class="button">Contact</button>
+                    <button className="button">Contact</button>
                   </p>
                 </a>
               </div>
@@ -48,19 +48,19 @@ export default function About() {
         </div>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <div class="container">
+      <div className="column">
+        <div className="card">
+          <div className="container">
             <div className="con">
               <img src={aman} alt="img" id="i1" />
               <div className="rtext">
                 <h2>Aman</h2>
-                <p class="title">CEO & Founder</p>
+                <p className="title">CEO & Founder</p>
                 <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                 <p>jane@example.com</p>
                 <a href="https://t.me/Aman1236547">
                   <p>
-                    <button class="button">Contact</button>
+                    <button className="button">Contact</button>
                   </p>
                 </a>
               </div>

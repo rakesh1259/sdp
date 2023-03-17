@@ -3,11 +3,11 @@ import "./Hotel.css";
 import h from "./media/hotel.jpg";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import { useState } from 'react';
 export default function Hotel() {
   const handletoast=()=>{
-    toast('Hotel Booked Sucessfully', {
+    toast.info('Available Hotels', {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -25,25 +25,21 @@ export default function Hotel() {
     const yyyy = today.getFullYear();
     return yyyy + "-" + mm + "-" + dd;
   };
-  var [location,setLocation]= useState(null);
- var [tor,setTor]=useState(null);
- var [rin,setRin]=useState(null);
- var [rout,setRout]=useState(null);
- var [guest,setGuests]=useState(null);
-//  const navigate=useNavigate(false)
+  const navigate=useNavigate();
  function hoteldata(e){
   e.preventDefault();
-
+  const data = new FormData(e.currentTarget);
    const hoteluserdata={
-     location:location,
-     TypeofRoom:tor,
-     Checkin:rin,
-     CheckOut:rout,
-    guests:guest
+     location:data.get('location'),
+     TypeofRoom:data.get('room'),
+     Checkin:data.get('doj'),
+     CheckOut:data.get('dor'),
+    guests:data.get('guest')
    }
    console.log(hoteluserdata);
    axios.post("http://localhost:1259/api/hotel",hoteluserdata)
    .then((response)=> {
+    navigate("/hresult");
     handletoast();
    })
    .catch(e=>console.log(e))
@@ -51,27 +47,27 @@ export default function Hotel() {
  }
   return (
     <>
-      <div class="parent">
+      <div className="parent">
         <img src={h} alt=""></img>
       </div>
       <div className="ho_container">
-        <form action="#" id="hform" onSubmit={hoteldata}>
+        <form  id="hform" onSubmit={hoteldata}>
           <h1>Book Your Hotel</h1>
-          <label for="location">Location:</label>
-          <input type="text" placeholder="Enter Place" required onChange={(e)=>{setLocation(e.target.value)}}/>
-          <label for="TypeofRoom">Type of Room:</label>
-          <select name="room" id="Type of Room" onChange={(e)=>{setTor(e.target.value)}}>
+          <label htmlFor="location">Location:</label>
+          <input type="text" placeholder="Enter Place" name="location" required />
+          <label htmlFor="TypeofRoom">Type of Room:</label>
+          <select name="room" id="Type of Room" >
             <option value="sroom">Suit Room</option>
             <option value="droom">Deluxe Room</option>
             <option value="nroom">Normal Room</option>
           </select>
-          <label for="Checkin">Check in:</label>
-          <input type="date" id="doj" name="doj" required min={disablePastDate()} onChange={(e)=>{setRin(e.target.value)}}></input>
-          <label for="CheckOut" id="cls1">
+          <label htmlFor="Checkin">Check in:</label>
+          <input type="date" id="doj" name="doj" required min={disablePastDate()} ></input>
+          <label htmlFor="CheckOut" id="cls1">
             Check Out:
           </label>
-          <input type="date" id="doj" name="doj" required min={disablePastDate()} onChange={(e)=>{setRout(e.target.value)}}></input>
-          <label for="guests" id="cls5">
+          <input type="date" id="dor" name="dor" required min={disablePastDate()} ></input>
+          <label htmlFor="guests" id="cls5">
             No of Guests:
           </label>
           <input
@@ -80,9 +76,9 @@ export default function Hotel() {
             min="1"
             max="5"
             required
-            onChange={(e)=>{setGuests(e.target.value)}}
+           name="guest"
           />
-          <button>Book</button>
+          <button>Search</button>
         </form>
       </div>
     </>

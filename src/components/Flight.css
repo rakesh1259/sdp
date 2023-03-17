@@ -57,7 +57,7 @@ label {
   height: 100%;
   transition: all 0.6s ease-in-out;
 }
-.btn1 button {
+.Navlink{
   position: absolute;
   top: 99%;
   left: 40%;
@@ -65,7 +65,7 @@ label {
 .f_container ::placeholder {
   color: black;
 }
-button:hover {
+.Navlink:hover {
   background-color: #1026f0;
 }
 #aeroplane {

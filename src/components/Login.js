@@ -10,18 +10,18 @@ import facebook from "./media/f.png";
 import google from "./media/google.png";
 import linkedin from "./media/l.png";
 export default function Login() {
-  const handletoastr=()=>{
-    toast.success('Registration Sucessfull', {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      });
-     }
+  // const handletoastr=()=>{
+  //   toast.success('Registration Sucessfull', {
+  //     position: "bottom-right",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: "light",
+  //     });
+  //    }
   const handletoastl1=()=>{
     toast.success('Login Sucessfull', {
       position: "bottom-right",
@@ -58,7 +58,7 @@ export default function Login() {
        theme: "light",
        });
       }
-  // const navigate = useNavigate();
+   const navigate = useNavigate();
   const [kl, setKl] = useState("container");
   const handleon = () => {
     setKl("container");
@@ -66,27 +66,23 @@ export default function Login() {
   const handleon1 = () => {
     setKl("container right-panel-active");
   };
-  var [name,setName]= useState(null);
-  var [email,setEmail]=useState(null);
-  var [pass,setPassword]=useState(null);
-  const navigate=useNavigate(false)
-  function signupdata(){
+  const registerdata=(e)=>{
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
     const registerdata={
-      name:name,
-      email:email,
-      password:pass
-    }
-    console.log(registerdata);
-    axios.post("http://localhost:1259/api/register",registerdata)
-    .then(response=> {
-    })
-    .catch(e=>console.log(e))
-
+          name:data.get('name'),
+          email:data.get('email'),
+          password:data.get('pass')
+     }
+        console.log(registerdata);
+        axios.post("http://localhost:1259/api/register",registerdata)
+        .then(response=> {
+          console.log("Success")
+        })
+    
   }
-  // var [errmsg,seterrmsg]=useState(null);
-  // const navigate=useNavigate(false)
-  var [mail,setLEmail]=useState(null);
-  var [pwd,setLPassword]=useState(null);
+  var [mail,setLEmail]=useState();
+  var [pwd,setLPassword]=useState();
   const [cookies, setCookie, removeCookie] = useCookies(['dummycookie']);
   function signindata(e){
     e.preventDefault();
@@ -96,8 +92,8 @@ export default function Login() {
     }
     axios.post("http://localhost:1259/api/login",logindata)
     .then((response)=> {
-      console.log(response)
       if(response.data==="invalid"){
+        console.log(response.email)
         handletoastp();
       }
       else if(response.data==="newuser")
@@ -118,7 +114,7 @@ export default function Login() {
     <>
       <div className={kl} id="container">
         <div className="form-container sign-up-container">
-          <form action="#" id="lform"  autoComplete="false">
+          <form onSubmit={registerdata} id="lform"  autoComplete="false">
             <h1>Create Account</h1>
             <div className="social-container">
               <a href="https://www.facebook.com/" className="social">
@@ -135,10 +131,10 @@ export default function Login() {
               </a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" name="name" required onChange={(e)=>{setName(e.target.value)}}/>
-            <input type="email" placeholder="Email" name="email" required onChange={(e)=>{setEmail(e.target.value)}}/>
-            <input type="password" placeholder="Password" minLength="8" name="pass" required onChange={(e)=>{setPassword(e.target.value)}} />
-            <button value='STORE'  class="close" data-dismiss="alert" variant="outlined" onClick={signupdata}>Sign Up</button>     
+            <input type="text" placeholder="Name" name="name" required />
+            <input type="email" placeholder="Email" name="email" required />
+            <input type="password" placeholder="Password" minLength="8" name="pass" required  />
+            <button value='STORE'  className="close" data-dismiss="alert" variant="outlined" >Sign Up</button>     
           </form>
         </div>
         <div className="form-container sign-in-container">
@@ -162,7 +158,6 @@ export default function Login() {
             <input type="email" placeholder="Email" value={mail} name='mail' onChange={(e)=>{setLEmail(e.target.value)}}/>
             <input type="password" placeholder="Password" value={pwd} name='pwd' onChange={(e)=>{setLPassword(e.target.value)}}/>
             <p href="/">Forgot your password?</p>
-           {/* <Link to='/'> <p className='badge bg-primary text-wrap>Sign In</p></Link> */}
            <button onClick={signindata}>Sign In</button>
           </form>
         </div>
