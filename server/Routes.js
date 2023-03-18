@@ -1,4 +1,4 @@
-const { response } = require('express');
+const { response, Router } = require('express');
 const express = require('express');
 const router = express.Router()
 const signuptemp=require("./models/Registermodel")
@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
 const FlightModel = require('./models/FlightModel');
 const HotelModel =require('./models/HotelModel');
+const { ClassSharp } = require('@mui/icons-material');
 router.post('/register',async (req,res)=>{
     const saltpwd = await bcrypt.genSalt(10);
     const securepassword = await bcrypt.hash(req.body.password,saltpwd);
@@ -33,6 +34,7 @@ router.post('/flight',async(req,res)=>{
   try{
     await flight.save();
     res.send("Inserted Values");
+    console.log(flight);
   }
     catch(err){
       console.log(err);
@@ -118,5 +120,21 @@ router.post('/login',async (req,res)=>{
     }
   }
 });
+router.get("/flight1", async (req, res) => {
+  try {
+    const history = await FlightModel.find();
+    res.send(history);
+    console.log(history)
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
 
+router.delete('/delete/:source',async (req,res) => {
+  const source = req.params.source;
+  const result = await col.deleteOne({source : source});
+  console.log(result);
+  res.send(result);
+})
 module.exports=router
