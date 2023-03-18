@@ -124,17 +124,16 @@ router.get("/flight1", async (req, res) => {
   try {
     const history = await FlightModel.find();
     res.send(history);
-    console.log(history)
   } catch (error) {
     console.error(error.message);
     res.status(500).send("Internal Server Error");
   }
 });
 
-router.delete('/delete/:source',async (req,res) => {
-  const source = req.params.source;
-  const result = await col.deleteOne({source : source});
-  console.log(result);
+router.delete('/delete/:id',async (req,res) => {
+  const source = req.params.id;
+  const result = await FlightModel.deleteOne({_id : source});
+  console.log("1234567890");
   res.send(result);
 })
 module.exports=router
