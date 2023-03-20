@@ -1,7 +1,7 @@
 .rcon{
     position: absolute;
     left: 25%;
-    top: 20%;
+    top: 130%;
     width: 50%;
     height: 30%;
     margin: 0 auto;
@@ -13,22 +13,22 @@
     z-index: 10;
     background-color: white;
 }
-.rcon img{
+.rcon .ing{
    position: absolute;
    top: 12%;
    left: -5%;
    height: 85%;
 }
-.rcon p{
+.rcon h1{
     position: absolute;
     left:38%;
     
-    top: 40%;
+    top: 15%;
 }
 .rcon2{
     position: absolute;
     left: 25%;
-    top: 55%;
+    top: 175%;
     width: 50%;
     height: 30%;
     margin: 0 auto;
@@ -40,15 +40,36 @@
     z-index: 10;
     background-color: white;
 }
-.rcon2 img{
+.rcon2 .ing{
     position: absolute;
    top: 1%;
    left: -7%;
    height: 100%;
 }
-.rcon2 p{
+.rcon2 h1{
     position: absolute;
     left:38%;
-    
-    top: 40%;
+    top: 15%;
+}
+.rcon .arr{
+    position: absolute;
+    left: 55%;
+    width:25%;
+    top: 15%;
+}
+.rcon2 .arr{
+    position: absolute;
+    left: 55%;
+    width:25%;
+    top: 15%;
+}
+.rcon .de{
+    position: absolute;
+    left:68%;
+    top: 15%;
+}
+.rcon2 .de{
+    position: absolute;
+    left:68%;
+    top: 15%;
 }

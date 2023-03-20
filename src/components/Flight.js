@@ -1,11 +1,15 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Flight.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import FResult from "./FResult";
 export default function Flight() {
+  const [srce, setSrce] = useState();
+  const [dest, setDest] = useState();
+  const [time, setTime] = useState();
   const disablePastDate = () => {
     const today = new Date();
     const dd = String(today.getDate() + 1).padStart(2, "0");
@@ -25,39 +29,47 @@ export default function Flight() {
       theme: "light",
     });
   };
-  const navigate = useNavigate();
+  
+  // const navigate = useNavigate();
   function flightdata(e) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
+    setDest(data.get("dest"));
+    setSrce(data.get("source"));
+    setTime(data.get("cls"));
     const flightuserdata = {
-      source: data.get('source'),
-      destination: data.get('dest'),
-      typeoftravel: data.get('cls'),
-      dateofjourney: data.get('doj'),
-      dateofreturn: data.get('dor'),
-      passengers: data.get('passen'),
+      source: data.get("source"),
+      destination: data.get("dest"),
+      typeoftravel: data.get("cls"),
+      dateofjourney: data.get("doj"),
+      dateofreturn: data.get("dor"),
+      passengers: data.get("passen"),
     };
     console.log(flightuserdata);
     axios
       .post("http://localhost:1259/api/flight", flightuserdata)
-      .then((response) => {navigate("/fresult");handletoast();})
+      .then((response) => {
+        handletoast();
+      })
       .catch((e) => console.log(e));
   }
-  const [formData, setFormData] = useState({});
+  const [ setFormData] = useState({});
   const handleSubmit = (event) => {
     event.preventDefault();
     const source = event.target.elements.source.value;
     const dest = event.target.elements.dest.value;
     setFormData({ source, dest });
-     
+    
+
   };
   return (
     <>
       <div className="s_container">
         <div id="aeroplane"></div>
       </div>
+      
       <div className="f_container">
-        <form onSubmit={flightdata} id="fform">
+        <form onSubmit={flightdata} id="fform" action="FResult.js"> 
           <h1>Book Your Flight</h1>
           <label htmlFor="source" id="cls2">
             Source:
@@ -66,7 +78,8 @@ export default function Flight() {
             type="text"
             placeholder="Enter Source"
             required
-            name="source" 
+            name="source"
+        
           />
           <label htmlFor="destination" id="cls3">
             Destination:
@@ -75,16 +88,12 @@ export default function Flight() {
             type="text"
             placeholder="Enter Destination"
             required
-           name="dest"
+            name="dest"
           />
           <label htmlFor="destination" id="cls4">
             Type of Travel:
           </label>
-          <select
-            name="cls"
-            id="Type of Travel"
-           
-          >
+          <select name="cls" id="Type of Travel">
             <option value="none">None</option>
             <option value="BusinessClass">BusinessClass</option>
             <option value="EconomyClass">EconomyClass</option>
@@ -97,9 +106,8 @@ export default function Flight() {
             type="date"
             id="doj"
             name="doj"
-            required
+            
             min={disablePastDate()}
-          
           ></input>
           <label htmlFor="Journey Date" id="cls1">
             Date of Return:
@@ -108,9 +116,8 @@ export default function Flight() {
             type="date"
             id="dor"
             name="dor"
-            required
+            
             min={disablePastDate()}
-          
           ></input>
           <label htmlFor="destination" id="cls5">
             No of passengers:
@@ -120,18 +127,18 @@ export default function Flight() {
             placeholder="Number of Passengers"
             min="1"
             max="5"
-            required
-           name="passen"
+            
+            name="passen"
           />
           <button onSubmit={handleSubmit}>Search</button>
         </form>
       </div>
-      {Object.keys(formData).length !== 0 ? (
-        <div className="form-data">
-          <p>Name: {formData.source}</p>
-          <p>Email: {formData.dest}</p>
-        </div>
-      ) : null}
+      {
+        srce &&
+      <FResult srce = {srce} dest = {dest} time = {time} />
+      }
     </>
   );
 }
+
+

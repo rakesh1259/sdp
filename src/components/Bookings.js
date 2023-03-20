@@ -27,7 +27,7 @@ function Bookings() {
   return (
     <section>
       <div className="tname">
-        <h1>Fixed Table header</h1>
+        <h1>my bookings</h1>
       </div>
       <div class="tbl-header">
         <table cellpadding="0" cellspacing="0" border="0">

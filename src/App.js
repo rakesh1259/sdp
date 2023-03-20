@@ -8,10 +8,9 @@ import Hotel from './components/Hotel'
 import About from './components/About'
 import Nomatch from './components/Nomatch';
 import Bookings from './components/Bookings'
+import FResult from './components/FResult';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import FResult from './components/FResult';
-import HResults from './components/HResults';
 function App() {
   return (
     <>
@@ -25,7 +24,7 @@ function App() {
       <Route path='/hotel'  element={<Hotel/>}/>
       <Route path='/booking'  element={<Bookings/>}/>
       <Route path='/fresult' element={<FResult/>}/>
-      <Route path='/hresult' element={<HResults/>}/>
+      {/* <Route path='/hresult' element={<HResults/>}/> */}
       <Route path='*' element={<Nomatch />} />
     </Routes>
     </>
