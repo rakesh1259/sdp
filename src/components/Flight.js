@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Flight.css";
 import { toast } from "react-toastify";
@@ -30,7 +29,6 @@ export default function Flight() {
     });
   };
   
-  // const navigate = useNavigate();
   function flightdata(e) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
@@ -53,15 +51,6 @@ export default function Flight() {
       })
       .catch((e) => console.log(e));
   }
-  const [ setFormData] = useState({});
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const source = event.target.elements.source.value;
-    const dest = event.target.elements.dest.value;
-    setFormData({ source, dest });
-    
-
-  };
   return (
     <>
       <div className="s_container">
@@ -130,7 +119,7 @@ export default function Flight() {
             
             name="passen"
           />
-          <button onSubmit={handleSubmit}>Search</button>
+          <button >Search</button>
         </form>
       </div>
       {

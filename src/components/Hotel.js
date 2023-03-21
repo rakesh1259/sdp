@@ -4,7 +4,9 @@ import h from "./media/hotel.jpg";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import axios from 'axios';
+import HResults from "./HResults";
 export default function Hotel() {
   const handletoast=()=>{
     toast.info('Available Hotels', {
@@ -18,6 +20,9 @@ export default function Hotel() {
       theme: "light",
       });
      }
+     const [location, setLocation] = useState();
+  const [room, setTor] = useState();
+  const [doj, setDate] = useState();
   const disablePastDate = () => {
     const today = new Date();
     const dd = String(today.getDate() + 1).padStart(2, "0");
@@ -29,6 +34,9 @@ export default function Hotel() {
  function hoteldata(e){
   e.preventDefault();
   const data = new FormData(e.currentTarget);
+  setLocation(data.get("location"));
+  setTor(data.get("room"));
+  setDate(data.get("doj"));
    const hoteluserdata={
      location:data.get('location'),
      TypeofRoom:data.get('room'),
@@ -36,13 +44,23 @@ export default function Hotel() {
      CheckOut:data.get('dor'),
     guests:data.get('guest')
    }
+  
    console.log(hoteluserdata);
    axios.post("http://localhost:1259/api/hotel",hoteluserdata)
    .then((response)=> {
-    navigate("/hresult");
+    // navigate("/hresult");
     handletoast();
    })
    .catch(e=>console.log(e))
+  //  const [ setFormData] = useState({});
+  //  const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const location = event.target.elements.location.value;
+  //   const room = event.target.elements.room.value;
+  //   setFormData({ location, room });
+    
+
+  // };
 
  }
   return (
@@ -51,15 +69,15 @@ export default function Hotel() {
         <img src={h} alt=""></img>
       </div>
       <div className="ho_container">
-        <form  id="hform" onSubmit={hoteldata}>
+        <form  id="hform" onSubmit={hoteldata} action="HResults.js">
           <h1>Book Your Hotel</h1>
           <label htmlFor="location">Location:</label>
           <input type="text" placeholder="Enter Place" name="location" required />
           <label htmlFor="TypeofRoom">Type of Room:</label>
           <select name="room" id="Type of Room" >
             <option value="sroom">Suit Room</option>
-            <option value="droom">Deluxe Room</option>
-            <option value="nroom">Normal Room</option>
+            <option value="DELUXE ROOM">Deluxe Room</option>
+            <option value="Normal Room">Normal Room</option>
           </select>
           <label htmlFor="Checkin">Check in:</label>
           <input type="date" id="doj" name="doj" required min={disablePastDate()} ></input>
@@ -78,9 +96,14 @@ export default function Hotel() {
             required
            name="guest"
           />
-          <button>Search</button>
+          <button >Search</button>
         </form>
       </div>
+      {
+      location &&
+     <HResults location = {location} room = {room} doj = {doj} />
+      }
     </>
+     
   );
 }

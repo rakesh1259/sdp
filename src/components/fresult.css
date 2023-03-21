@@ -1,75 +1,75 @@
-.rcon{
-    position: absolute;
-    left: 25%;
-    top: 130%;
-    width: 50%;
-    height: 30%;
-    margin: 0 auto;
-    padding: 40px 0;
-    border-style: solid;
-    border-color: red;
-    border-radius: 15px;
-    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
-    z-index: 10;
-    background-color: white;
+.rcon {
+  position: absolute;
+  left: 25%;
+  top: 130%;
+  width: 50%;
+  height: 30%;
+  margin: 0 auto;
+  padding: 40px 0;
+  border-style: solid;
+  border-color: red;
+  border-radius: 15px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  background-color: white;
 }
-.rcon .ing{
-   position: absolute;
-   top: 12%;
-   left: -5%;
-   height: 85%;
+.rcon .ing {
+  position: absolute;
+  top: 12%;
+  left: -5%;
+  height: 85%;
 }
-.rcon h1{
-    position: absolute;
-    left:38%;
-    
-    top: 15%;
+.rcon h1 {
+  position: absolute;
+  left: 38%;
+
+  top: 15%;
 }
-.rcon2{
-    position: absolute;
-    left: 25%;
-    top: 175%;
-    width: 50%;
-    height: 30%;
-    margin: 0 auto;
-    padding: 40px 0;
-    border-style: solid;
-    border-color: red;
-    border-radius: 15px;
-    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
-    z-index: 10;
-    background-color: white;
+.rcon2 {
+  position: absolute;
+  left: 25%;
+  top: 175%;
+  width: 50%;
+  height: 30%;
+  margin: 0 auto;
+  padding: 40px 0;
+  border-style: solid;
+  border-color: red;
+  border-radius: 15px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  background-color: white;
 }
-.rcon2 .ing{
-    position: absolute;
-   top: 1%;
-   left: -7%;
-   height: 100%;
+.rcon2 .ing {
+  position: absolute;
+  top: 1%;
+  left: -7%;
+  height: 100%;
 }
-.rcon2 h1{
-    position: absolute;
-    left:38%;
-    top: 15%;
+.rcon2 h1 {
+  position: absolute;
+  left: 38%;
+  top: 15%;
 }
-.rcon .arr{
-    position: absolute;
-    left: 55%;
-    width:25%;
-    top: 15%;
+.rcon .arr {
+  position: absolute;
+  left: 55%;
+  width: 25%;
+  top: 15%;
 }
-.rcon2 .arr{
-    position: absolute;
-    left: 55%;
-    width:25%;
-    top: 15%;
+.rcon2 .arr {
+  position: absolute;
+  left: 55%;
+  width: 25%;
+  top: 15%;
 }
-.rcon .de{
-    position: absolute;
-    left:68%;
-    top: 15%;
+.rcon .de {
+  position: absolute;
+  left: 68%;
+  top: 15%;
 }
-.rcon2 .de{
-    position: absolute;
-    left:68%;
-    top: 15%;
+.rcon2 .de {
+  position: absolute;
+  left: 68%;
+  top: 15%;
 }

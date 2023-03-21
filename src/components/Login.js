@@ -77,7 +77,7 @@ export default function Login() {
         console.log(registerdata);
         axios.post("http://localhost:1259/api/register",registerdata)
         .then(response=> {
-          
+          handleon();
         })
     
   }
