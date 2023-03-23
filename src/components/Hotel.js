@@ -96,7 +96,7 @@ export default function Hotel() {
             required
            name="guest"
           />
-          <button >Search</button>
+          <button >Book</button>
         </form>
       </div>
       {
