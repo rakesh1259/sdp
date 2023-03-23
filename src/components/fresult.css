@@ -73,3 +73,11 @@
   left: 68%;
   top: 15%;
 }
+hr {
+  width: 70%;
+  position: absolute;
+  left: 28%;
+  top: 42%;
+  border-top: 4px solid black;
+  
+}

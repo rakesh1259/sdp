@@ -18,6 +18,7 @@ export default function FResult(props) {
         <div className="de">
           <h1>{props.dest}</h1>{" "}
         </div>
+        <hr />
       </div>
       <div className="rcon2">
         <div class="ing">
@@ -30,6 +31,7 @@ export default function FResult(props) {
         <div className="de">
           <h1>{props.dest}</h1>{" "}
         </div>
+        <hr />
       </div>
     </>
   );
