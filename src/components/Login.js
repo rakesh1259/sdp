@@ -9,7 +9,9 @@ import axios from 'axios';
 import facebook from "./media/f.png";
 import google from "./media/google.png";
 import linkedin from "./media/l.png";
+import { useTheme } from './authcontext';
 export default function Login() {
+  const theme = useTheme();
   // const handletoastr=()=>{
   //   toast.success('Registration Sucessfull', {
   //     position: "bottom-right",
@@ -104,7 +106,9 @@ export default function Login() {
       else if(response.status===200){
         setCookie('token', response.data.token, { path: '/' });
         console.log("Success")
+        // theme.handlogin();
         console.log(response.data.email)
+        theme.handlogin();
         navigate('/')  
         handletoastl1();
       }else{
