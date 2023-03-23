@@ -18,7 +18,17 @@ export default function FResult(props) {
         <div className="de">
           <h1>{props.dest}</h1>{" "}
         </div>
+        <div className="fno">
+          <h2>(AE622)</h2>
+        </div>
         <hr />
+        <div className="tclass">
+        <h2>{props.time}</h2>
+        </div>
+        <div className="price">
+          <h2>₹19,872/-</h2>
+        </div>
+        <button className="fbook">BOOK</button>
       </div>
       <div className="rcon2">
         <div class="ing">
@@ -32,6 +42,17 @@ export default function FResult(props) {
           <h1>{props.dest}</h1>{" "}
         </div>
         <hr />
+        <div className="fno">
+          <h2>(EK527)</h2>
+        </div>
+        <hr />
+        <div className="tclass">
+        <h2>{props.time}</h2>
+        </div>
+        <div className="price">
+          <h2>₹24,325/-</h2>
+        </div>
+        <button className="fbook">BOOK</button>
       </div>
     </>
   );

@@ -81,3 +81,28 @@ hr {
   border-top: 4px solid black;
   
 }
+.fno{
+  position: absolute;
+  top: 10%;
+  left: 85%;
+}
+.tclass{
+  position: absolute;
+  top: 55%;
+  left: 30%;
+}
+.price{
+  position: absolute;
+  top: 55%;
+  left: 55%;
+}
+.rcon button{
+  position: absolute;
+  top: 60%;
+  left: 76%;
+}
+.rcon2 button{
+  position: absolute;
+  top: 60%;
+  left: 76%;
+}
