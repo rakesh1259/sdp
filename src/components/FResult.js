@@ -1,10 +1,26 @@
 import React from "react";
 import "./fresult.css";
 import "./Flight";
+import { toast } from "react-toastify";
 import ai from "./media/airindia.png";
 import e from "./media/emirates.png";
 import arrow from "./media/right-arrow.png";
 export default function FResult(props) {
+  const handletoast = () => {
+    toast.success("FLIGHT BOOKED SUCCESSFULLY!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  const handleclick=()=>{
+    handletoast();
+  }
   return (
     <>
       <div className="rcon">
@@ -28,7 +44,7 @@ export default function FResult(props) {
         <div className="price">
           <h2>₹19,872/-</h2>
         </div>
-        <button className="fbook">BOOK</button>
+        <button onClick={handleclick} className="fbook">BOOK</button>
       </div>
       <div className="rcon2">
         <div class="ing">
@@ -52,7 +68,7 @@ export default function FResult(props) {
         <div className="price">
           <h2>₹24,325/-</h2>
         </div>
-        <button className="fbook">BOOK</button>
+        <button onClick={handleclick} className="fbook">BOOK</button>
       </div>
     </>
   );
