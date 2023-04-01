@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css';
 import logo from './media/logos.jpg'
 import { NavLink } from 'react-router-dom'
+
 // import { useState, useEffect } from 'react';
 import { useTheme } from './authcontext';
 export default function Navbar() {
@@ -19,9 +20,9 @@ export default function Navbar() {
                 <NavLink to="/hotel" ><label>HOTELS</label></NavLink>&emsp;&emsp;
                 <NavLink to="/booking"><label>My Bookings</label></NavLink>&emsp;&emsp;  
                 <NavLink to="/about"><label>About us</label></NavLink>&emsp;&emsp;
+                <NavLink to="/contact"><label>Contact us</label></NavLink>&emsp;&emsp;
 {(!theme.login)?<NavLink to="/login"><label>Login</label></NavLink>:<NavLink to="/login"><label onClick={handlelogout}>Logout</label></NavLink>}
-                {/* <NavLink to="/login"><label>Login</label></NavLink>&emsp;&emsp;   */}
-                {/* <Avatar src="/broken-image.jpg" alt=''/> */}
+                
             </ul>
         </nav>
     </>

@@ -12,6 +12,7 @@ import FResult from './components/FResult';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { ThemeProvider } from './components/authcontext';
+import Contact from './components/Contact';
 function App() {
   return (
     <>
@@ -28,6 +29,7 @@ function App() {
       <Route path='/hotel'  element={<Hotel/>}/>
       <Route path='/booking'  element={<Bookings/>}/>
       <Route path='/fresult' element={<FResult/>}/>
+      <Route path='/contact' element={<Contact/>}/>
       {/* <Route path='/hresult' element={<HResults/>}/> */}
       <Route path='*' element={<Nomatch />} />
     </Routes>
