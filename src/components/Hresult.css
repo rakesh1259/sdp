@@ -1,4 +1,4 @@
-.rcon {
+.hcon {
     position: absolute;
     left: 25%;
     top: 130%;
@@ -13,19 +13,19 @@
     z-index: 10;
     background-color: white;
   }
-  .rcon .ing {
+  .hcon .ing {
     position: absolute;
     top: 12%;
-    left: -5%;
+    left: 2%;
     height: 85%;
   }
-  .rcon h1 {
+  .hcon h1 {
     position: absolute;
     left: 38%;
   
     top: 15%;
   }
-  .rcon2 {
+  .hcon2 {
     position: absolute;
     left: 25%;
     top: 175%;
@@ -40,37 +40,150 @@
     z-index: 10;
     background-color: white;
   }
-  .rcon2 .ing {
+  .hcon2 .ing {
     position: absolute;
-    top: 1%;
-    left: -7%;
-    height: 100%;
+    top: 8%;
+    left: 2%;
+    height: 90%;
   }
-  .rcon2 h1 {
+  .hcon2 h1 {
+    position: absolute;
+    left: 40%;
+    top: 17%;
+  }
+  .hcon .arr {
+    position: absolute;
+    left: 55%;
+    width: 25%;
+    top: 15%;
+  }
+  .hcon2 .arr {
+    position: absolute;
+    left: 55%;
+    width: 25%;
+    top: 15%;
+  }
+  .hcon h2{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+  }
+  .hcon .rating{
+    position: absolute;
+    top: 0;
+    left:65%;
+    height:69%;
+  }
+  .hcon hr {
+    width: 50%;
     position: absolute;
     left: 38%;
-    top: 15%;
+    top: 30%;
+    border-top: 4px solid black;
+    
   }
-  .rcon .arr {
+  .hcon .price{
     position: absolute;
-    left: 55%;
-    width: 25%;
-    top: 15%;
+    top: 35%;
+    left: 80%;
   }
-  .rcon2 .arr {
+  .hcon h3{
     position: absolute;
-    left: 55%;
-    width: 25%;
-    top: 15%;
+    left: 80%;
+    top: 45%;
   }
-  .rcon .de {
+  .hcon .check{
     position: absolute;
-    left: 68%;
-    top: 15%;
+    width: 15%;
+    left: 38%;
+    top: 60%;
   }
-  .rcon2 .de {
+  .hcon h4{
     position: absolute;
-    left: 68%;
-    top: 15%;
+    left: 41%;
+    top: 51%;
   }
+  .hcon .check1{
+    position: absolute;
+    width: 15%;
+    left: 38%;
+    top: 73%;
+  }
+  .hcon .food{
+    position: absolute;
+    left: 41%;
+    top: 65%;
+  }
+.hcon button{
+  position: absolute;
+  top: 75%;
+  left: 80%;
+}
+.hcon2 h2{
+  position: absolute;
+  top: 30%;
+  left: 42%;
+}
+.hcon2 .rating{
+  position: absolute;
+  top: 0;
+  left:76%;
+  height:69%;
+}
+.hcon2 hr {
+  width: 50%;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  border-top: 4px solid black;
   
+}
+.hcon2 .price{
+  position: absolute;
+  top: 35%;
+  left: 84%;
+}
+.hcon2 h3{
+  position: absolute;
+  left: 84%;
+  top: 45%;
+}
+.hcon2 .check{
+  position: absolute;
+  width: 15%;
+  left: 40%;
+  top: 60%;
+}
+.hcon2 h4{
+  position: absolute;
+  left: 43%;
+  top: 52%;
+}
+.hcon2 .check1{
+  position: absolute;
+  width: 15%;
+  left: 40%;
+  top: 74%;
+}
+.hcon2 .food{
+  position: absolute;
+  left: 44%;
+  top: 66%;
+}
+.hcon2 button{
+position: absolute;
+top: 75%;
+left: 81%;
+}
+.hcon .roomav{
+  position: absolute;
+  width: 35%;
+  left: 60%;
+  top: 50%;
+}
+.hcon2 .roomav{
+  position: absolute;
+  width: 35%;
+  left: 60%;
+  top: 50%;
+}
