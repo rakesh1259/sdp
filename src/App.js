@@ -13,6 +13,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { ThemeProvider } from './components/authcontext';
 import Contact from './components/Contact';
+import Ticket from './components/Ticket';
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       {/* <Route path='/hresult' element={<HResults/>}/> */}
       <Route path='*' element={<Nomatch />} />
+      <Route path='/ticket' element={<Ticket/>}/>
     </Routes>
     </ThemeProvider>
     </>
