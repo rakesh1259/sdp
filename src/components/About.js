@@ -13,9 +13,9 @@ export default function About() {
               <img src={chinnu} alt="img" id="i1" />
               <div className="rtext">
                 <h2>Vinay</h2>
-                <p className="title">Designer</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>jane@example.com</p>
+                <p className="title">Developer</p>
+                <p>I have designed the frontend and backend of our website.</p>
+                <p>iamvinayy100@gmail.com</p>
                 <a href="https://t.me/vinaychinnu">
                   <p>
                     <button className="button">Contact</button>
@@ -27,6 +27,7 @@ export default function About() {
         </div>
       </div>
 
+
       <div className="column">
         <div className="card">
           <div className="container">
@@ -35,8 +36,8 @@ export default function About() {
               <div className="rtext">
                 <h2>Rakesh</h2>
                 <p className="title">Developer</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>jane@example.com</p>
+                <p>I have developed the frontend and backend of our website.</p>
+                <p>bandarurakesh@gmail.com</p>
                 <a href="https://t.me/rakhi1259">
                   <p>
                     <button className="button">Contact</button>
@@ -57,7 +58,7 @@ export default function About() {
                 <h2>Aman</h2>
                 <p className="title">CEO & Founder</p>
                 <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>jane@example.com</p>
+                <p>amandarbar@gmail.com</p>
                 <a href="https://t.me/Aman1236547">
                   <p>
                     <button className="button">Contact</button>
