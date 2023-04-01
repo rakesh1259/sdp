@@ -1,7 +1,11 @@
 import React from "react";
 import "./Booking.css";
+import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
+import a2 from "./media/airplane2no.png"
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useTheme } from "./authcontext";
 function Bookings() {
    const [Result, setResult] = useState(null);
   function CancelTicket(id) {
@@ -24,6 +28,23 @@ function Bookings() {
         console.log(error);
       });
   }, [Result]);
+  const navigate=useNavigate();
+  const handletoastauth = () => {
+    toast.warning("LOGIN FIRST", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      toastId:"s1",
+    });
+  };
+  const theme = useTheme();
+  if(theme.login===true)
+  {
   return (
     <section>
       <div className="tname">
@@ -47,7 +68,7 @@ function Bookings() {
       <div class="tbl-content">
         <table cellpadding="0" cellspacing="0" border="0">
           <tbody>
-            {Result ? (
+            {Result  ? (
             Result.map((obj, key) => (
               <tr key={key}>
                 <td>{obj.source}</td>
@@ -66,5 +87,28 @@ function Bookings() {
       </div>
     </section>
   );
+}else{
+  handletoastauth();
+  const handlebutton=()=>{
+    navigate('/login')
+  }
+  return (
+    <>
+      <img src={a2} class="ufo1" alt=""/>
+<img src={a2} class="ufo2" alt=""/>
+
+<div class="starsBG">
+<div class="authcontainer">
+  <div class="main2">
+    <p>Please Login Your Bookings</p>
+    <button onClick={handlebutton}>Login Here</button>
+  </div>
+</div>
+</div>
+    </>
+  );
 }
+}
+
+
 export default Bookings;

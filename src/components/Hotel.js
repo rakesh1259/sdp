@@ -4,7 +4,9 @@ import h from "./media/hotel.jpg";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { useNavigate } from "react-router-dom";
+import a2 from "./media/airplane2no.png"
 import { useState } from "react";
+import { useTheme } from "./authcontext";
 import axios from 'axios';
 import HResults from "./HResults";
 export default function Hotel() {
@@ -20,6 +22,19 @@ export default function Hotel() {
       theme: "light",
       });
      }
+     const handletoastauth = () => {
+      toast.warning("LOGIN FIRST", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        toastId:"s1",
+      });
+    };
      const [location, setLocation] = useState();
   const [room, setTor] = useState();
   const [doj, setDate] = useState();
@@ -63,6 +78,8 @@ export default function Hotel() {
   // };
 
  }
+ const theme = useTheme();
+ if (theme.login === true) {
   return (
     <>
       <div className="parent">
@@ -106,4 +123,25 @@ export default function Hotel() {
     </>
      
   );
+}else {
+  handletoastauth();
+  const handlebutton=()=>{
+    navigate('/login')
+  }
+  return (
+    <>
+      <img src={a2} class="ufo1" alt=""/>
+<img src={a2} class="ufo2" alt=""/>
+
+<div class="starsBG">
+<div class="authcontainer">
+  <div class="main2">
+    <p>Please Login</p>
+    <button onClick={handlebutton}>Login Here</button>
+  </div>
+</div>
+</div>
+    </>
+  );
+}
 }
