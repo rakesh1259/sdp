@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
 const FlightModel = require('./models/FlightModel');
 const HotelModel =require('./models/HotelModel');
+const ContactModel =require('./models/ContactModel');
 const { ClassSharp } = require('@mui/icons-material');
 router.post('/register',async (req,res)=>{
     const saltpwd = await bcrypt.genSalt(10);
@@ -49,6 +50,20 @@ const Guests=req.body.guests;
 const hotels = new HotelModel({location:location, TypeofRoom:TypeofRoom,Checkin:Checkin,CheckOut:CheckOut,Guests:Guests});
 try{
   await hotels.save();
+  res.send("Inserted Values");
+}
+  catch(err){
+    console.log(err);
+  }
+})
+router.post('/contact',async(req,res)=>{
+  const Name=req.body.Name;
+const Email=req.body.Email;
+const Phone = req.body.Phone;
+const Message= req.body.Message;
+const contacts = new ContactModel({Name:Name, Email:Email,Phone:Phone,Message:Message});
+try{
+  await contacts.save();
   res.send("Inserted Values");
 }
   catch(err){

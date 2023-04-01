@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const flighttemplate = new mongoose.Schema({
+const contacttemplate = new mongoose.Schema({
     Name:{
         type:String,
         required:true
@@ -14,8 +14,8 @@ const flighttemplate = new mongoose.Schema({
     },
     Message:{
         type: String,
-         default: currentDate,
+         required:true
       
     }
 })
-module.exports=mongoose.model('flights',flighttemplate)
+module.exports=mongoose.model('contacts',contacttemplate)
