@@ -85,7 +85,8 @@ export default function Login() {
   }
   // var [mail,setLEmail]=useState();
   // var [pwd,setLPassword]=useState();
-  const [cookies, setCookie, removeCookie] = useCookies(['dummycookie']);
+  const [setCookie] = useCookies(['dummycookie']);
+  
   function signindata(e){
     e.preventDefault();
     const data = new FormData(e.currentTarget);
