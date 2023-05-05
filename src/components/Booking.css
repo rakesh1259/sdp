@@ -48,3 +48,8 @@
     margin: 50px;
   }
   
+.payment pform{
+  position: absolute;
+  top: 0%;
+left:0%;
+}

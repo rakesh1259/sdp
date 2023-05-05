@@ -27,7 +27,7 @@ export default function Contact() {
  };
  console.log(contactdata);
     axios
-      .post("http://localhost:1259/api/contact", contactdata)
+      .post("https://backend-server-5pd1.onrender.com/api/contact", contactdata)
       .then((response) => {
         handletoast();
       })
@@ -48,6 +48,7 @@ export default function Contact() {
         <input type="text" class="field" placeholder="Phone"  htmlFor="phone" name="Phone"/>
         <input type="text" placeholder="Message" class="field" name="Message" htmlFor="Message"/>     
         <button class="btn"  >Send</button>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_LYhx7w8lQmzbPc" async> </script>
       </div>
     </div>
     </form>

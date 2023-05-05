@@ -64,7 +64,7 @@ export default function Flight() {
     };
     console.log(flightuserdata);
     axios
-      .post("http://localhost:1259/api/flight", flightuserdata)
+      .post("https://backend-server-5pd1.onrender.com/api/flight", flightuserdata)
       .then((response) => {
         handletoast();
       })

@@ -1,6 +1,6 @@
 import * as React from 'react';
 // import Alert from '@mui/material/Alert';
-import { useCookies } from 'react-cookie';
+// import { useCookies } from 'react-cookie';
 import {  useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { toast } from 'react-toastify';
@@ -77,7 +77,7 @@ export default function Login() {
           password:data.get('pass')
      }
         console.log(registerdata);
-        axios.post("http://localhost:1259/api/register",registerdata)
+        axios.post("https://backend-server-5pd1.onrender.com/api/register",registerdata)
         .then(response=> {
           handleon();
         })
@@ -85,8 +85,8 @@ export default function Login() {
   }
   // var [mail,setLEmail]=useState();
   // var [pwd,setLPassword]=useState();
-  const [setCookie] = useCookies(['dummycookie']);
-  
+  // const [setCookie] = useCookies(['dummycookie']);
+
   function signindata(e){
     e.preventDefault();
     const data = new FormData(e.currentTarget);
@@ -94,7 +94,7 @@ export default function Login() {
       email:data.get('mail'),
       password:data.get('pwd')
     }
-    axios.post("http://localhost:1259/api/login",logindata)
+    axios.post("https://backend-server-5pd1.onrender.com/api/login",logindata)
     .then((response)=> {
       if(response.data==="invalid"){
         
@@ -105,7 +105,7 @@ export default function Login() {
           handletoastm();
       }
       else if(response.status===200){
-        setCookie('token', response.data.token, { path: '/' });
+        // setCookie('token', response.data.token, { path: '/' });
         console.log("Success")
         // theme.handlogin();
         console.log(response.data.email)

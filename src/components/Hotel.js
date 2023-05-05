@@ -61,7 +61,7 @@ export default function Hotel() {
    }
   
    console.log(hoteluserdata);
-   axios.post("http://localhost:1259/api/hotel",hoteluserdata)
+   axios.post("https://backend-server-5pd1.onrender.com/api/hotel",hoteluserdata)
    .then((response)=> {
     // navigate("/hresult");
     handletoast();

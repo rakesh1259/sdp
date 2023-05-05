@@ -7,10 +7,24 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useTheme } from "./authcontext";
 function Bookings() {
+  // useEffect(() => {
+  //   const rzpPaymentForm = document.getElementById("rzp_payment_form");
+    
+  //   if (!rzpPaymentForm.hasChildNodes()) {
+
+  //     const script = document.createElement("script");
+  //     script.src = "https://checkout.razorpay.com/v1/payment-button.js" ;
+  //     script.async = true;
+  //     script.dataset.payment_button_id = "pl_LYhx7w8lQmzbPc";
+  //     rzpPaymentForm.appendChild(script);
+
+  //   }
+
+  // });
    const [Result, setResult] = useState(null);
   function CancelTicket(id) {
     axios
-      .delete(`http://localhost:1259/api/delete/${id}`, { params: {} })
+      .delete(`https://backend-server-5pd1.onrender.com/api/delete/${id}`, { params: {} })
       .then((response) => {
         console.log(response.data);
       })
@@ -19,8 +33,9 @@ function Bookings() {
       });
   }
   useEffect(() => {
+    
     axios
-      .get(`http://localhost:1259/api/flight1`, {})
+      .get(`https://backend-server-5pd1.onrender.com/api/flight1`, {})
       .then((response) => {
         setResult(response.data.reverse());
       })
@@ -46,6 +61,7 @@ function Bookings() {
   if(theme.login===true)
   {
   return (
+    <>
     <section>
       <div className="tname">
         <h1>my bookings</h1>
@@ -85,7 +101,10 @@ function Bookings() {
           </tbody>
         </table>
       </div>
-    </section>
+      {/* <form id="rzp_payment_form"></form> */}
+       </section>
+    
+    </>
   );
 }else{
   handletoastauth();
