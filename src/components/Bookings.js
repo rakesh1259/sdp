@@ -74,8 +74,8 @@ function Bookings() {
               <th>Destination</th>
               <th>Travel Type</th>
               <th>Date of Journey</th>
-              <th>Date of Return</th>
-              <th>Passengers</th>
+              <th>Name</th>
+              <th>Email</th>
               <th>CANCEL</th>
             </tr>
           </thead>
@@ -91,8 +91,8 @@ function Bookings() {
                 <td>{obj.destination}</td>
                 <td>{obj.typeoftravel}</td>
                 <td>{obj.dateofjourney}</td>
-                <td>{obj.dateofreturn}</td>
-                <td>{obj.passengers}</td>
+                <td>{obj.name}</td>
+                <td>{obj.email}</td>
                 <td><button onClick={()=>CancelTicket(obj._id)}>Cancel</button></td>
               </tr>
             ))):(

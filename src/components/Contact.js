@@ -33,10 +33,10 @@ export default function Contact() {
       .post("https://backend-server-5pd1.onrender.com/api/contact", contactdata)
       emailjs
       .sendForm(
-        "service_qo8k3o5",
-        "template_ialvrhb",
+        "service_ukt71cq",
+        "template_mmsi8c4",
         form.current,
-        "E1XeV4OmsDFTPhfbH"
+        "vI1h7guVd1aWOKHS9"
       )
       .then((response,result) => {
         handletoast();
