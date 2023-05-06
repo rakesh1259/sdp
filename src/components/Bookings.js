@@ -119,7 +119,7 @@ function Bookings() {
 <div class="starsBG">
 <div class="authcontainer">
   <div class="main2">
-    <p>Please Login Your Bookings</p>
+    <p>Please Login To See Your Bookings</p>
     <button onClick={handlebutton}>Login Here</button>
   </div>
 </div>

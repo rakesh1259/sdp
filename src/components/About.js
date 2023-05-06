@@ -13,7 +13,7 @@ export default function About() {
               <img src={chinnu} alt="img" id="i1" />
               <div className="rtext">
                 <h2>Vinay</h2>
-                <p className="title">Developer</p>
+                <p className="title">Designer</p>
                 <p>I have designed the frontend and backend of our website.</p>
                 <p>iamvinayy100@gmail.com</p>
                 <a href="https://t.me/vinaychinnu">

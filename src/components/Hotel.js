@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useRef} from "react";
 import "./Hotel.css";
+import emailjs from "@emailjs/browser";
 import h from "./media/hotel.jpg";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
@@ -10,6 +11,7 @@ import { useTheme } from "./authcontext";
 import axios from 'axios';
 import HResults from "./HResults";
 export default function Hotel() {
+  const form = useRef();
   const handletoast=()=>{
     toast.info('Available Hotels', {
       position: "bottom-right",
@@ -62,9 +64,18 @@ export default function Hotel() {
   
    console.log(hoteluserdata);
    axios.post("https://backend-server-5pd1.onrender.com/api/hotel",hoteluserdata)
-   .then((response)=> {
+   emailjs
+   .sendForm(
+     "service_qo8k3o5",
+     "template_ialvrhb",
+     form.current,
+     "E1XeV4OmsDFTPhfbH"
+   )
+   .then((response,result)=> {
     // navigate("/hresult");
     handletoast();
+    console.log(result.text);
+        console.log("message sent");
    })
    .catch(e=>console.log(e))
   //  const [ setFormData] = useState({});
@@ -86,7 +97,7 @@ export default function Hotel() {
         <img src={h} alt=""></img>
       </div>
       <div className="ho_container">
-        <form  id="hform" onSubmit={hoteldata} action="HResults.js">
+        <form ref={form} id="hform" onSubmit={hoteldata} action="HResults.js">
           <h1>Book Your Hotel</h1>
           <label htmlFor="location">Location:</label>
           <input type="text" placeholder="Enter Place" name="location" required />
@@ -99,18 +110,15 @@ export default function Hotel() {
           <label htmlFor="Checkin">Check in:</label>
           <input type="date" id="doj" name="doj" required min={disablePastDate()} ></input>
           <label htmlFor="CheckOut" id="cls1">
-            Check Out:
+            Name:
           </label>
-          <input type="date" id="dor" name="dor" required min={disablePastDate()} ></input>
+          <input type="text" id="dor" name="dor" required placeholder="Enter Your Name" ></input>
           <label htmlFor="guests" id="cls5">
-            No of Guests:
+            Email:
           </label>
           <input
-            type="number"
-            placeholder="Number of Persons"
-            min="1"
-            max="5"
-            required
+            type="email"
+            placeholder="Enter Email"
            name="guest"
           />
           <button >search</button>
