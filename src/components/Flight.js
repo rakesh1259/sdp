@@ -1,5 +1,6 @@
-import React from "react";
+import React,{ useRef }from "react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
@@ -22,6 +23,7 @@ export default function Flight() {
     const yyyy = today.getFullYear();
     return yyyy + "-" + mm + "-" + dd;
   };
+  const form = useRef();
   const handletoast = () => {
     toast.info("These are Available Flights", {
       position: "bottom-right",
@@ -62,11 +64,21 @@ export default function Flight() {
       name: data.get("name"),
       email: data.get("email"),
     };
+   
     console.log(flightuserdata);
     axios
       .post("http://localhost:1259/api/flight", flightuserdata)
-      .then((response) => {
+      emailjs
+      .sendForm(
+        "service_qo8k3o5",
+        "template_rwcealb",
+        form.current,
+        "E1XeV4OmsDFTPhfbH"
+      )
+      .then((response,result) => {
         handletoast();
+        console.log(result.text);
+        console.log("message sent");
       })
       .catch((e) => console.log(e));
   }
@@ -79,7 +91,7 @@ export default function Flight() {
         </div>
 
         <div className="f_container">
-          <form onSubmit={flightdata} id="fform" action="FResult.js">
+          <form  ref={form} onSubmit={flightdata} id="fform" action="FResult.js">
             <h1>Book Your Flight</h1>
             <label htmlFor="source" id="cls2">
               Source:
