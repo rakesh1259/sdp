@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Contact.css'
+import emailjs from "@emailjs/browser";
 import { toast } from 'react-toastify';
 import axios from "axios";
 export default function Contact() {
@@ -15,6 +16,8 @@ export default function Contact() {
         theme: "light",
       });
  }
+  const form = useRef();
+
  function cdata(e){
   e.preventDefault();
   const data = new FormData(e.currentTarget);
@@ -28,16 +31,31 @@ export default function Contact() {
  console.log(contactdata);
     axios
       .post("https://backend-server-5pd1.onrender.com/api/contact", contactdata)
-      .then((response) => {
+      emailjs
+      .sendForm(
+        "service_qo8k3o5",
+        "template_ialvrhb",
+        form.current,
+        "E1XeV4OmsDFTPhfbH"
+      )
+      .then((response,result) => {
         handletoast();
+        console.log(result.text);
+        console.log("message sent");
       })
       .catch((e) => console.log(e));
+
+
+
+     
+       
   }
+
   return (
     <>
    
     <div class="ccontainer">
-    <form onSubmit={cdata}>
+    <form ref={form}  onSubmit={cdata}>
     <div class="contact-box">
       <div class="left"></div>
       <div class="right">
@@ -47,8 +65,7 @@ export default function Contact() {
         <input type="text" class="field" placeholder="Your Email"  htmlFor="mail" name="Email"/>
         <input type="text" class="field" placeholder="Phone"  htmlFor="phone" name="Phone"/>
         <input type="text" placeholder="Message" class="field" name="Message" htmlFor="Message"/>     
-        <button class="btn"  >Send</button>
-        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_LYhx7w8lQmzbPc" async> </script>
+        <button class="btn">Send</button>
       </div>
     </div>
     </form>

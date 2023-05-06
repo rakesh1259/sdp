@@ -29,14 +29,14 @@ const flighttemplate = new mongoose.Schema({
          default: currentDate,
       
     },
-    dateofreturn:{
+    name:{
         type: String,
-        default: currentDate ,
+        required: true ,
         
     },
-    passengers:{
+    email:{
         type:String,
-        required:true
+        required:true,
     }
 })
 module.exports=mongoose.model('flights',flighttemplate)

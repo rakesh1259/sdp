@@ -59,12 +59,12 @@ export default function Flight() {
       destination: data.get("dest"),
       typeoftravel: data.get("cls"),
       dateofjourney: data.get("doj"),
-      dateofreturn: data.get("dor"),
-      passengers: data.get("passen"),
+      name: data.get("name"),
+      email: data.get("email"),
     };
     console.log(flightuserdata);
     axios
-      .post("https://backend-server-5pd1.onrender.com/api/flight", flightuserdata)
+      .post("http://localhost:1259/api/flight", flightuserdata)
       .then((response) => {
         handletoast();
       })
@@ -117,24 +117,21 @@ export default function Flight() {
               name="doj"
               min={disablePastDate()}
             ></input>
-            <label htmlFor="Journey Date" id="cls1">
-              Date of Return:
+            <label htmlFor="Name" id="cls1">
+              Name:
             </label>
             <input
-              type="date"
-              id="dor"
-              name="dor"
-              min={disablePastDate()}
+            placeholder="Enter Name"
+              type="text"
+              name="name"
             ></input>
-            <label htmlFor="destination" id="cls5">
-              No of passengers:
+            <label htmlFor="email" id="cls5">
+              Email:
             </label>
             <input
-              type="Number"
-              placeholder="Number of Passengers"
-              min="1"
-              max="5"
-              name="passen"
+            placeholder="Enter Email"
+              type="email"
+              name="email"
             />
             <button>Search</button>
           </form>

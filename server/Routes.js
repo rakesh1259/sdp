@@ -29,9 +29,9 @@ router.post('/flight',async(req,res)=>{
   const destination=req.body.destination;
   const typeoftravel = req.body.typeoftravel;
   const dateofjourney= req.body.doj;
-  const ReturnDate=req.body.dor;
-  const passengers=req.body.passengers;
-  const flight = new FlightModel({source:source, destination:destination,typeoftravel:typeoftravel,dateofjourney:dateofjourney,ReturnDate:ReturnDate,passengers:passengers});
+  const name=req.body.name;
+  const email=req.body.email;
+  const flight = new FlightModel({source:source, destination:destination,typeoftravel:typeoftravel,dateofjourney:dateofjourney,name:name,email:email});
   try{
     await flight.save();
     res.send("Inserted Values");
