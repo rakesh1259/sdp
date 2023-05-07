@@ -57,7 +57,7 @@ export default function About() {
               <div className="rtext">
                 <h2>Aman</h2>
                 <p className="title">CEO & Founder</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>I Have Developed frontend and lead the Team</p>
                 <p>amandarbar@gmail.com</p>
                 <a href="https://t.me/Aman1236547">
                   <p>
